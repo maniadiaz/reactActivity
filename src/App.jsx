@@ -1,56 +1,57 @@
-import { useState } from 'react'
-import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
+import React, { useEffect, useState } from "react";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, CircularProgress, Typography } from "@mui/material";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const usuarios = [
-    { nombre: "Juan", apellido: "Perez", edad: 30 },
-    { nombre: "Ana", apellido: "Gomez", edad: 25 },
-    { nombre: "Carlos", apellido: "Lopez", edad: 40 },
-    { nombre: "Katherine", apellido: "Guardado", edad: 17 },
-    { nombre: "Alexis", apellido: "Diaz", edad: 17 }
-  ];
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al obtener los datos");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUsers(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <CircularProgress />;
+  if (error) return <Typography color="error">Error: {error}</Typography>;
 
   return (
-    <>
-      <div className="card">
-        <button onClick={() => {
-          if(count < 10){
-            setCount(count + 1);
-          }else{
-            alert("Llegaste al límite");
-          }
-          
-        }}>
-          Contador es {count}
-        </button>
-      </div>
-
-      <div className='card'>
-        <h1>Usuarios</h1>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Edad</th>
-            </tr>
-          </thead>
-          <tbody>
-            {usuarios.map((usuario, index) => (
-              <tr key={index}>
-                <td>{usuario.nombre}</td>
-                <td>{usuario.apellido}</td>
-                <td>{usuario.edad}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ID</TableCell>
+            <TableCell>Nombre</TableCell>
+            <TableCell>Email</TableCell>
+            <TableCell>Ciudad</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {users.map((user) => (
+            <TableRow key={user.id}>
+              <TableCell>{user.id}</TableCell>
+              <TableCell>{user.name}</TableCell>
+              <TableCell>{user.email}</TableCell>
+              <TableCell>{user.address.city}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
-}
+};
 
 export default App;
