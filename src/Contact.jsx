@@ -2,7 +2,7 @@ function Contact() {
   return (
     <div className="contact">
       <h2>Contactanos</h2>
-      <p>Si tu tines alguna pregunta mandanos un mensaje </p>
+      <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos.</p>
       <form>
         <label htmlFor="name">Nombre:</label><br />
         <input type="text" id="name" name="name" required disabled/><br />

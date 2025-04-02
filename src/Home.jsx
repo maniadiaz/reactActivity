@@ -1,56 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, CircularProgress, Typography } from "@mui/material";
+import React from "react";
+import { Container, Typography, Button, Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 function Home(){
-    const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al obtener los datos");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setUsers(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <CircularProgress />;
-  if (error) return <Typography color="error">Error: {error}</Typography>;
+  const navigate = useNavigate(); 
 
   return (
-    <div className="card">
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Nombre</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Ciudad</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {users.map((user) => (
-              <TableRow key={user.id}>
-                <TableCell>{user.id}</TableCell>
-                <TableCell>{user.name}</TableCell>
-                <TableCell>{user.email}</TableCell>
-                <TableCell>{user.address.city}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </div>
+    <Container maxWidth="md" sx={{ textAlign: "center", mt: 5 }}>
+      {}
+      <Typography variant="h3" gutterBottom>
+        Bienvenido a mi Proyecto
+      </Typography>
+
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Explora nuestras secciones y descubre todo lo que tenemos para ofrecerte.
+      </Typography>
+
+      {}
+      <Box component="img" 
+        src="https://i.pinimg.com/736x/39/97/eb/3997eb06057902de14a542b15ffc37e4.jpg" 
+        alt="Bienvenida"
+        sx={{ width: "100%", maxHeight: "300px", mb: 3, borderRadius: 2 }}
+      />
+
+      {}
+      <Button 
+        variant="contained" 
+        color="primary"
+        onClick={() => navigate("/about")}
+      >
+        Conócenos
+      </Button>
+    </Container>
   );
 }
 
