@@ -1,13 +1,42 @@
+import React from "react";
+import {Box, Typography, Button, Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 function About() {
+  const navigate = useNavigate();
     return (
-      <div>
-        <h1> Sobre nosotros </h1>
-          <h3> Creado por : </h3> <p> Alexis Diaz</p>
-          <h3> Fecha creada : </h3> <p> 02 de abril del 2025</p>
-          <h3> Universidad : </h3> <p> Universidad Autonoma de Sinaloa</p>
-          <h3> Materia : </h3> <p> Geografia</p>
-          <h3> Profesor : </h3> <p> Ing. Erick Iván Sánchez Valdez</p>
-      </div>
+    <Container maxWidth="md" sx={{ textAlign: "center", mt: 5 }}>
+      <Typography variant="h2" gutterBottom>
+        Acerca de Nosotros
+      </Typography>
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Creado por : Alexis Diaz
+      </Typography>
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Fecha creada : 02 de abril del 2025
+      </Typography>
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Universidad : Universidad Autonoma de Sinaloa
+      </Typography>
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Materia  : Geografia
+      </Typography>
+      {}
+      <Typography variant="body1" sx={{ mb: 3 }}>
+        Profesor  : Ing. Erick Iván Sánchez Valdez
+      </Typography>
+      {}
+      <Button 
+          variant="contained" 
+          color="primary"
+          onClick={() => navigate("/Contact")}
+        >
+          Contactanos
+        </Button>
+    </Container>
     );
   }
 

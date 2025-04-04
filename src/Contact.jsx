@@ -1,21 +1,41 @@
+import React from "react";
+import {Box, Typography, Button, Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 function Contact() {
+  const navigate = useNavigate();
   return (
-    <div className="contact">
-      <h2>Contactanos</h2>
-      <p>Si tienes alguna pregunta o comentario, no dudes en contactarnos.</p>
-      <form>
-        <label htmlFor="name">Nombre:</label><br />
-        <input type="text" id="name" name="name" required disabled/><br />
-
-        <label htmlFor="email">Correo electronico:</label><br />
-        <input type="email" id="email" name="email" required disabled/><br />
-
-        <label htmlFor="message">Mensaje:</label><br />
-        <textarea id="message" name="message" required disabled></textarea><br />
-
-        <button type="submit" disabled>Enviar</button><br />
-      </form>
-    </div>
+    <Container maxWidth="md" sx={{ textAlign: "center", mt: 5 }}>
+      {}
+      <Box>
+        <Typography variant="h2" gutterBottom>
+          Contactanos
+        </Typography>
+        {}
+        <Typography variant="body1" sx={{ mb: 3 }}>
+          Si tienes alguna pregunta o comentario, no dudes en contactarnos.
+        </Typography>
+        {}
+        <form>
+          <Box sx={{ mb: 2 }}>
+            <input type="text" placeholder="Nombre" required disabled/>
+          </Box>
+          <Box sx={{ mb: 2 }}>
+            <input type="email" placeholder="Correo electrónico" required disabled/>
+          </Box>
+          <Box sx={{ mb: 2 }}>
+            <textarea placeholder="Mensaje" required disabled></textarea>
+          </Box>
+          <Button variant="contained" color="primary" onClick={() => navigate("/")}>
+            Regresar
+          </Button>
+          {}
+          <Button variant="contained" color="primary" type="submit">
+            Enviar
+          </Button>
+        </form>
+      </Box>
+    </Container>
   );
 }
 

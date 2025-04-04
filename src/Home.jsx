@@ -20,7 +20,7 @@ function Home(){
       <Box component="img" 
         src="https://i.pinimg.com/736x/39/97/eb/3997eb06057902de14a542b15ffc37e4.jpg" 
         alt="Bienvenida"
-        sx={{ width: "100%", maxHeight: "300px", mb: 3, borderRadius: 2 }}
+        sx={{ width: "100%", maxHeight: "200px", mb: 3, borderRadius: 2 }}
       />
 
       {}
