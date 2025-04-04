@@ -50,7 +50,7 @@ Además, agregué un componente de navegación (`Navbar`) para poder moverme ent
 
 ## ✨ Vista previa
 
-> Próximamente puedes agregar capturas de pantalla o un GIF con la navegación funcionando.
+> Próximamente 
 
 ---
 
