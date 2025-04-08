@@ -26,8 +26,8 @@ function Contact() {
           <Box sx={{ mb: 2 }}>
             <textarea placeholder="Mensaje" required disabled></textarea>
           </Box>
-          <Button variant="contained" color="primary" onClick={() => navigate("/")}>
-            Regresar
+          <Button variant="contained" color="primary" onClick={() => navigate("/mapa")}>
+            Mapa
           </Button>
           {}
           <Button variant="contained" color="primary" type="submit">

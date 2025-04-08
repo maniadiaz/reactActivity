@@ -3,9 +3,9 @@ import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar >
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" >
           Mi Proyecto en React
         </Typography>
         <Button color="inherit" component={Link} to="/">
@@ -16,6 +16,9 @@ function Navbar() {
         </Button>
         <Button color="inherit" component={Link} to="/contact">
           Contacto
+        </Button>
+        <Button color="inherit" component={Link} to="/mapa">
+          Mapa
         </Button>
       </Toolbar>
     </AppBar>
