@@ -12,8 +12,8 @@ function Mapa() {
     }
 
     const center = {
-        lat: 23.269454, 
-        lng: -106.389809,
+        lat: 23.2314459, 
+        lng: -106.4265313,
       };
       
     const navigate = useNavigate();
