@@ -1,66 +1,39 @@
 # 🚀 Proyecto React - Enrutamiento y Navegación
 
-Este proyecto es una práctica para aprender a utilizar **React** junto con **React Router**, integrando navegación entre distintas páginas, componentes reutilizables y control de versiones con GitHub.
+Este proyecto es una práctica para aprender a utilizar **React** junto con **React Router**, integrando navegación entre distintas páginas, componentes reutilizables y control de versiones con GitHub. Ademas se agrego la utilizacioón de **React Google Maps Api** para poder ubicar la Facultad de Informactica de la UAS Mazatlán
 
 ---
 
-## 📚 ¿Qué aprendí?
+## Rutas implementadas
 
-Durante el desarrollo de este proyecto, aprendí a:
-
-- Utilizar **React** de manera eficiente y modular. ⚛️
-- Implementar rutas con **React Router DOM** para crear una SPA (Single Page Application). 🧭
-- Integrar distintas **librerías** y recursos externos. 🧩
-- Aplicar **control de versiones** con GitHub de forma práctica y ordenada. 🌐
-- Mejorar el flujo de trabajo al agregar nuevas funcionalidades o corregir errores mediante commits. 💡
-
-Esta experiencia me permitió ver lo útil que es trabajar con **GitHub** como sistema de control de versiones, y lo fácil que puede ser mantener un historial claro de cambios.
+- `/` -> Página de inicio con bienvenida y botón de navegación.
+- `/about` -> Información sobre el creador del proyecto.
+- `/contact` -> Formulario de contacto (con campos deshabilitados como ejemplo visual).
+- `/mapa ` -> Mapa donde se ubica la Faculta de Informatica Mazatlán
 
 ---
 
-## 🔀 ¿Cómo resolví el enrutamiento?
-
-Tuve varios desafíos porque era la primera vez que usaba `react-router-dom`. Para solucionarlos:
-
-1. 📖 Leí la **documentación oficial** para comprender cómo funciona `BrowserRouter`, `Routes`, `Route` y `Link`.
-2. 🔍 Busqué ejemplos de otros proyectos que usaban React Router.
-3. 🧪 Probé distintas configuraciones hasta que noté un error común: había colocado `<BrowserRouter>` en el archivo `App.jsx` en lugar de `main.jsx`.
-4. ✅ Al mover `<BrowserRouter>` a `main.jsx`, todo comenzó a funcionar correctamente.
-
-Además, agregué un componente de navegación (`Navbar`) para poder moverme entre diferentes secciones como `/`, `/about` y `/contact`.
-
----
-
-## 🧭 Rutas implementadas
-
-- `/` → Página de inicio con bienvenida y botón de navegación.
-- `/about` → Información sobre el creador del proyecto.
-- `/contact` → Formulario de contacto (con campos deshabilitados como ejemplo visual).
-
----
-
-## 🛠 Tecnologías usadas
+## Tecnologías usadas
 
 - React
 - React Router DOM
+- Google-Maps-Api
 - Material UI (para estilos)
 - Git & GitHub
 
 ---
 
-## ✨ Vista previa
+## Como Arrancar el proyecto
+- **Paso 1** Entrar a la carpeta reactActivity con el comando "cd reactActivity"
+- **Paso 2** Escribes "npm install"
+- **Paso 3** agregas un nuevo archivo llamado .env en la cual vas a tener que agregar tu keys en esa "VITE_GOOGLE_MAPS_API_KEY=(aqui va tu keys)"
+- **Paso 4** corre el programa con "npm run dev"
+-- **Paso 5** listo tu programa ya corrio entra al navegador y entra al navegador http://localhost:5173/
 
-> Próximamente 
-
----
-
-## 👨‍💻 Autor
+##  Autor
 
 - **Nombre:** Alexis Díaz  
 - **Universidad:** Universidad Autónoma de Sinaloa  
 - **Materia:** Geografía  
 - **Profesor:** Ing. Erick Iván Sánchez Valdez  
 
----
-
-¡Gracias por visitar este proyecto! 😊
