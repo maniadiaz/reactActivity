@@ -7,8 +7,8 @@ import React, { useState } from "react";
 function Mapa() {
 
     const containerStyle = {
-        width: "100%",
-        height: "400px",
+        width: "50vw",
+        height: "600px",
     }
 
     const center = {
@@ -21,9 +21,10 @@ function Mapa() {
     const [infoOpen, setInfoOpen] = useState(false);
 
     return (
-        <Container maxWidth="md" >
+        <Container maxWidth={false}>
             <Box
             sx={{
+                width: "100%",
                 p: 6,
                 boxShadow: 3,
                 borderRadius: 4,
