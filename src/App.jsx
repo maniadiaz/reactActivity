@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { LoadScript } from "@react-google-maps/api";
 import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';

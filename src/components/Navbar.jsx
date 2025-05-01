@@ -21,7 +21,7 @@ function Navbar() {
           Mapa
         </Button>
         <Button color="inherit" component={Link} to="/mapaRuta">
-          Mapa Ruta
+          UAS Hasta Plaza Machado
         </Button>
       </Toolbar>
     </AppBar>
