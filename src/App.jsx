@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Navbar from "./components/Navbar";
 import Mapa from "./components/Mapa-google";
 import MapaRuta from "./components/Mapa-ruta";
+import MapaConClustering  from "./components/MarkerConClustering";
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/mapaRuta" element={<MapaRuta />} />
+          <Route path="/mapaConClustering" element={<MapaConClustering />} />
       </Routes>
       </div>
     </>

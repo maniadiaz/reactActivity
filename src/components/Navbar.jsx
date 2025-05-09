@@ -23,6 +23,9 @@ function Navbar() {
         <Button color="inherit" component={Link} to="/mapaRuta">
           UAS Hasta Plaza Machado
         </Button>
+        <Button color="inherit" component={Link} to="/mapaConClustering">
+          Mapa con Marcadores
+        </Button>
       </Toolbar>
     </AppBar>
   );

@@ -1,10 +1,5 @@
 import { Box, Typography, Button, Container } from "@mui/material";
-import {
-  GoogleMap,
-  Marker,
-  InfoWindow,
-  useJsApiLoader,
-} from "@react-google-maps/api";
+import {GoogleMap,Marker,InfoWindow,useJsApiLoader} from "@react-google-maps/api";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
@@ -27,7 +22,7 @@ function Mapa() {
 
   const containerStyle = {
     width: "50vw",
-    height: "600px",
+    height: "400px",
   };
 
   return isLoaded ? (

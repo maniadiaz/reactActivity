@@ -21,7 +21,7 @@ const MapaConRuta = () => {
 
   const containerStyle = {
     width: "50vw",
-    height: "600px",
+    height: "400px",
   };
 
   const directionsCallback = (response) => {
