@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { LoadScript } from "@react-google-maps/api";
 import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -8,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Mapa from "./components/Mapa-google";
 import MapaRuta from "./components/Mapa-ruta";
 import MapaConClustering  from "./components/MarkerConClustering";
+import MapDrawing from "./components/MapDrawing";
 import './App.css'
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/mapaRuta" element={<MapaRuta />} />
           <Route path="/mapaConClustering" element={<MapaConClustering />} />
+          <Route path="/MapDrawing" element={<MapDrawing/>} />
       </Routes>
       </div>
     </>
