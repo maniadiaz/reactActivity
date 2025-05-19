@@ -1,10 +1,10 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, MarkerF, MarkerClustererF } from "@react-google-maps/api";
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 
 const conteinerStyle = {
     width: "100%",
-    height: "600px"
+    height: "600px",
 }
 
 const center = {

@@ -29,6 +29,9 @@ function Navbar() {
         <Button color="inherit" component={Link} to="/MapDrawing">
           Mapa Conteiner
         </Button>
+        <Button color="inherit" component={Link} to="/mapaRutaConMarcadores">
+          Mapa Ruta con Marcadores
+        </Button>
       </Toolbar>
     </AppBar>
   );
